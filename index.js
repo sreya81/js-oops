@@ -40,7 +40,7 @@ class product{
         console.log(this.price,"discount applied")
     }
     AfterDiscount(){
-        console.log(this.price,"afterdiscount")
+        console.log(this.price-50,"afterdiscount")
     }
 }
 var p1=new product("fogg","200","perfume");
@@ -59,9 +59,11 @@ class account{
         this.balance=balance;
     }
     deposite(amount){
+        this.balance=this.balance+amount;
         console.log(this.balance,"amount is deposited")
     }
     withdraw(amount){
+        this.balance=this.balance-amount;
         console.log(this.balance,"amount is withdrawed")
     }
     getbalance(){
@@ -85,6 +87,7 @@ class vehicle{
         this.mileage=mileage;
     }
     drive(miles){
+        this.mileage=miles+this.mileage;
         console.log(this.mileage,"increase the mileage");
     }
     getmileage(){
